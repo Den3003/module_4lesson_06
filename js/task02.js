@@ -3,7 +3,7 @@
 {
   const allCashbox = [4500, 3210, 650, 1250, 7830, 990, 13900, 370];
 
-  const getAverageValue = ([...arr]) => {
+  const getAverageValue = (arr) => {
     return Math.floor(arr.reduce((sum, current) => sum + current) / arr.length);
   }
   console.log(getAverageValue(allCashbox));

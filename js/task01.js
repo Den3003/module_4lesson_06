@@ -4,13 +4,8 @@
   const allStudents = ['Иванов', 'Петров', 'Сидоров', 'Кузнецов', 'Смирнов', 'Попов', 'Соколов'];
   const failedStudents = ['Сидоров', 'Смирнов', 'Попов'];
 
-  const filter = ([...arrayAllStudents], [...arrayFailedStudents]) => {
-    const finishStudents= [];
-    arrayAllStudents.forEach((item) => {
-      if (!(arrayFailedStudents.includes(item)))
-        finishStudents.push(item);
-    })
-    return finishStudents
-  }
+  const filter = (arrayAllStudents, arrayFailedStudents) => arrayAllStudents
+    .filter((item) => !(arrayFailedStudents.includes(item)));
+
   console.log(filter(allStudents, failedStudents));
 }
