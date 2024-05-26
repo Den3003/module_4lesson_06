@@ -12,9 +12,11 @@
     [1, 370]
   ];
 
-  const getAveragePriceGoods = (arr) => arr.reduce((res, currentValue) => 
+  const getAveragePriceGoods = (arr) => {
+    const result = arr.reduce((res, currentValue) => 
       [res[0] + currentValue[0], res[1] + currentValue[1]])
-      .reduce((acc, value) => value / acc)
-  
+      .reduce((acc, value) => value / acc);
+    return Math.round((result + Number.EPSILON) * 100) / 100;
+  }
   console.log(getAveragePriceGoods(allCashbox));
 }
