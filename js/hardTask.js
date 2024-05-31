@@ -16,7 +16,8 @@
     const result = arr.reduce((res, currentValue) => 
       [res[0] + currentValue[0], res[1] + currentValue[1]])
       .reduce((acc, value) => value / acc);
-    return Math.round((result + Number.EPSILON) * 100) / 100;
+    
+    return +result.toFixed(2);
   }
   console.log(getAveragePriceGoods(allCashbox));
 }
